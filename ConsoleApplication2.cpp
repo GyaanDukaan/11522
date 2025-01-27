@@ -26,8 +26,6 @@ private:
     std::mutex resize_mutex;  // Mutex to handle resizing of the hash table
     std::mutex access_mutex;  // Mutex to handle access to the hash table
 
-    //static_assert(!std::is_pointer<Key>::value, "Pointers are not allowed as keys.");
-
     size_t hash(const Key& key) const {
         return std::hash<Key>{}(key) % table_size;
     }
@@ -285,7 +283,6 @@ void testMyCustomHashFunction() {
     };
     CustomHashTable<int*, std::string> hashTable(4);
     try {
-     //   CustomHashTable<int*, std::string> hashTable(4);
         // should not allow nullptr as key, handle cases where pointers are not allowed as keys.
         assert(hashTable.insert(nullptr, "one"));
     }
