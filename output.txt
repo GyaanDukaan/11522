@@ -1,0 +1,12 @@
+Duplicate insertion test passed!
+Remove non-existent key test passed!
+Table resizing test passed!
+Empty table operations test passed!
+Large number of inserts and finds test passed!
+Thread safety test passed!
+Single entry test passed!
+Custom hash function test passed!
+
+ nullptr is not allowed as a key.Custom hash function test passed!
+Concurrent inserts test passed!
+Concurrent finds test passed!
